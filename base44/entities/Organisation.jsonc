@@ -1,0 +1,45 @@
+{
+  "name": "Organisation",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Organisation name"
+    },
+    "description": {
+      "type": "string",
+      "description": "About the organisation"
+    },
+    "banner_url": {
+      "type": "string",
+      "description": "Banner image URL"
+    },
+    "logo_url": {
+      "type": "string",
+      "description": "Logo image URL"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "technology",
+        "education",
+        "nonprofit",
+        "business",
+        "community",
+        "government",
+        "other"
+      ]
+    },
+    "member_count": {
+      "type": "number",
+      "default": 0
+    },
+    "is_public": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

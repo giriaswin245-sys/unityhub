@@ -1,0 +1,34 @@
+{
+  "name": "JoinRequest",
+  "type": "object",
+  "properties": {
+    "organisation_id": {
+      "type": "string"
+    },
+    "organisation_name": {
+      "type": "string"
+    },
+    "user_email": {
+      "type": "string"
+    },
+    "user_name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected"
+      ],
+      "default": "pending"
+    },
+    "message": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "organisation_id",
+    "user_email"
+  ]
+}

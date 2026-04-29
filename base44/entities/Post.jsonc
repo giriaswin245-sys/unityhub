@@ -1,0 +1,58 @@
+{
+  "name": "Post",
+  "type": "object",
+  "properties": {
+    "content": {
+      "type": "string",
+      "description": "Post content"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Optional image"
+    },
+    "author_name": {
+      "type": "string"
+    },
+    "author_avatar": {
+      "type": "string"
+    },
+    "organisation_id": {
+      "type": "string"
+    },
+    "likes": {
+      "type": "number",
+      "default": 0
+    },
+    "comments_count": {
+      "type": "number",
+      "default": 0
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "post",
+        "poll",
+        "announcement"
+      ],
+      "default": "post"
+    },
+    "poll_options": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string"
+          },
+          "votes": {
+            "type": "number"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "content",
+    "author_name"
+  ]
+}

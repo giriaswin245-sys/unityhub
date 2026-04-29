@@ -1,0 +1,35 @@
+{
+  "name": "GroupMessage",
+  "type": "object",
+  "properties": {
+    "group_id": {
+      "type": "string"
+    },
+    "sender_name": {
+      "type": "string"
+    },
+    "sender_email": {
+      "type": "string"
+    },
+    "sender_avatar": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "text",
+        "image",
+        "file"
+      ],
+      "default": "text"
+    }
+  },
+  "required": [
+    "group_id",
+    "content",
+    "sender_email"
+  ]
+}

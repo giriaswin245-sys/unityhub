@@ -1,0 +1,39 @@
+{
+  "name": "Magazine",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "cover_image": {
+      "type": "string"
+    },
+    "author_name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "featured",
+        "technology",
+        "culture",
+        "opinion",
+        "news"
+      ]
+    },
+    "issue_number": {
+      "type": "string"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "title",
+    "content"
+  ]
+}
